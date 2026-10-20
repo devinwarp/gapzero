@@ -1,0 +1,30 @@
+# secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+credentials*.json
+secrets/
+
+# organizer material (local reference only, large PDFs)
+hackathon-docs/
+
+# deps / build
+node_modules/
+dist/
+vendor/
+.vite/
+
+# runtime output
+logs/
+.gapzero/
+data/generated/
+eval/ground_truth/
+coverage/
+perf/results/
+
+# os / editor
+.DS_Store
+.idea/
+*.log
