@@ -9,7 +9,7 @@
 - [x] Read all hackathon docs and Meterless + Zetaris repos (see LEARNINGS.md)
 - [x] Choose idea (GapZero) and track (The Agent That Can Explain Why)
 - [x] PLAN.md, TODO.md, LEARNINGS.md, AGENTS.md, .env.example, .gitignore
-- [ ] Create public repo `devinwarp/gapzero` and push the planning docs (declared as pre-existing)
+- [x] Create public repo `devinwarp/gapzero` and push the planning docs (declared as pre-existing) — c4095c3
 - [ ] 👤 Docker Desktop: memory 10 GB, CPUs 4+, **Use Rosetta** on; stop `projectops-dev-*` containers during the hackathon
 - [ ] 👤 Register at Zetaris Cloud, download `zetaris-platform.zip`, copy the registry login command
 - [ ] Zetaris: unzip, `docker login`, `./preflight.sh`, set admin values in its `.env`, `docker compose pull && up -d`
