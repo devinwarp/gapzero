@@ -1,6 +1,6 @@
 # GapZero — Plan
 
-> **Status:** draft, awaiting Shameer's approval (builder check done; decisions marked "Max's call") · last updated 2026-10-20 (UTC)
+> **Status:** approved by Shameer 2026-10-21 (decisions marked "Max's call") · last updated 2026-10-20 (UTC)
 > **Event:** Open Agent Hackathon 2026 · build window 22 Oct 00:00 → **27 Oct 23:45 UTC** (hard deadline)
 > **Track:** The Agent That Can Explain Why · **Team:** solo (Shameer + AI pair "Max")
 > **Repo:** `devinwarp/gapzero` (public) · task tracking in [TODO.md](TODO.md) · lessons in [LEARNINGS.md](LEARNINGS.md)

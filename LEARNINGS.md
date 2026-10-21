@@ -23,6 +23,8 @@
 - **2026-10-20** — REST API: `POST {ZETARIS_REST_URL}/sql-editor/sqls/run`, headers `Authorization: Bearer <key>`, `X-Org-ID: 1` (local), `X-Request-ID: <fresh uuid>`. Body `{queryId, sql, source:"SqlEditor", limit}`. Rows are in `data`. Port 8889 is internal; don't use it. API reference at `localhost:8888/redoc/index.html`.
 - **2026-10-20** — Bundled samples are `NY_TAXI` and `TPCDS_DB` (plus `ZETARIS_SEED_TPCH=true` in setup). → `TPCDS_DB` is a fallback source if JDBC fails.
 - **2026-10-20** — Images are x86; on Apple Silicon turn on Rosetta in Docker Desktop and expect a slow first start. Docker needs 8 GB (preflight fails below 6 GB).
+- **2026-10-21**: The academy "Start Here" lesson is an earlier draft with organiser placeholders, so it differs from the Participant Setup Guide PDF. It uses the `zetaris/Freemium` GitHub repo with Docker Hub login, four containers (`zetaris-db/server/api/gui`), a GUI on **:9001** and default login `dev@account.com`. We follow the PDF route instead: `zetaris-platform.zip` from Zetaris Cloud, the `zetarishackathon.azurecr.io` registry, a GUI on **:3000**, and `admin@zetaris.com`. API :8888 and JDBC :10000 are the same in both. If the zip route breaks, Freemium is the fallback.
+- **2026-10-21**: The `zetaris-platform` compose file publishes the UI as `${UI_PORT}:3000` on all interfaces. Setting `UI_PORT=127.0.0.1:3000` binds it to loopback only. The API, JDBC and metastore are already loopback-only, and Caddy runs only under the `tls` profile.
 
 ## Meterless
 
@@ -34,6 +36,7 @@
 - **2026-10-20** — The NVIDIA API key goes **only** in Nightshift's Providers tab, never in our `.env`. Our app only needs the Nightshift URL and runtime token from the Console. Keep the Meterless token out of Cursor's model settings (it would bill Meterless while coding).
 - **2026-10-20** — Nightshift Mac editions: "M1+" is free for M1–M4; M5+ is a $199 preorder. → Our M4 Pro uses M1+.
 - **2026-10-20** — Useful upstream: `templates/agentathon-starter` (H-MEM notebook agent), `examples/memory-compounding-research` (H-MEM + Markovian), and the CI prompt "Gate every change in CI" (run conformance per engine on PRs).
+- **2026-10-21**: The academy lesson describes a hosted Meterless setup with `METERLESS_API_KEY`, `NEMOTRON_MODEL` and credit. The Runtime contract we verified is the local Nightshift setup: a Bearer token from the Console (also written to `<stateDir>/proxy-token`), with routing ids from `/v1/models`. We keep our env names. The point of their smoke test still applies (one reply from a Nemotron lane), and we run it as curl rather than adding Python to the repo.
 
 ## Machine (Shameer's Mac)
 
