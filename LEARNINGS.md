@@ -37,6 +37,7 @@
 - **2026-10-20** — Nightshift Mac editions: "M1+" is free for M1–M4; M5+ is a $199 preorder. → Our M4 Pro uses M1+.
 - **2026-10-20** — Useful upstream: `templates/agentathon-starter` (H-MEM notebook agent), `examples/memory-compounding-research` (H-MEM + Markovian), and the CI prompt "Gate every change in CI" (run conformance per engine on PRs).
 - **2026-10-21**: The academy lesson describes a hosted Meterless setup with `METERLESS_API_KEY`, `NEMOTRON_MODEL` and credit. The Runtime contract we verified is the local Nightshift setup: a Bearer token from the Console (also written to `<stateDir>/proxy-token`), with routing ids from `/v1/models`. We keep our env names. The point of their smoke test still applies (one reply from a Nemotron lane), and we run it as curl rather than adding Python to the repo.
+- **2026-10-21**: Nightshift M1-M4 keeps its runtime token at `~/Library/Application Support/ai.meterless.nightshift.m1m4/runtime-token`. Out of the box (no providers) `/v1/models` lists `meterless/*` modes plus in-browser `webllm/*` models (Llama 3.2 1B/3B, Qwen2.5, Gemma 2, Phi-3.5), and `meterless/fast` routes to `webllm/Llama-3.2-1B`. That is a usable last-resort fallback, but no Nemotron appears until an NVIDIA key is added in Providers.
 
 ## Machine (Shameer's Mac)
 

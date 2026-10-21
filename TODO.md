@@ -10,15 +10,15 @@
 - [x] Choose idea (GapZero) and track (The Agent That Can Explain Why)
 - [x] PLAN.md, TODO.md, LEARNINGS.md, AGENTS.md, .env.example, .gitignore
 - [x] Create public repo `devinwarp/gapzero` and push the planning docs (declared as pre-existing) — c4095c3
-- [ ] 👤 Docker Desktop: memory 10 GB, CPUs 4+, **Use Rosetta** on; stop `projectops-dev-*` containers during the hackathon
+- [x] Docker Desktop: 10 GB, 6 CPUs, Rosetta on (settings-store.json, backup at ~/docker-settings-store.backup.json); projectops containers stopped
 - [x] 👤 Register at Zetaris Cloud, download `zetaris-platform.zip` (unzipped to ~/zetaris/zetaris-platform; admin password set in its .env, chmod 600)
 - [~] Zetaris: `docker login` (👤 needs the Run-locally command), `./preflight.sh`, `docker compose pull && up -d`
 - [ ] Zetaris: `./verify.sh` 9/9, `SELECT 1`, Pikachu query returns 2 rows
 - [ ] 👤 Zetaris: create an API key in the web UI and put it in our `.env` (never paste it into chat)
-- [~] 👤 Nightshift: installed to /Applications ("Nightshift M1-M4.app"); 👤 launch it, verify email; runtime not yet answering on :8088
+- [x] Nightshift running on :8088; runtime token wired into `.env`; `/v1/models` 200; `meterless/fast` replied (local webllm Llama-3.2-1B)
 - [ ] 👤 NVIDIA: build.nvidia.com key, then Nightshift Providers tab, then confirm Nemotron models are unlocked
 - [ ] Nightshift: Lane 1 fast `nemotron-3.5-lightning-30b-a3b`, Lane 2 deep `nemotron-3.5-super-vl-120b-a12b` (or the closest available)
-- [ ] 👤 Copy the Nightshift Console URL and runtime token into our `.env`
+- [x] Nightshift URL + runtime token in `.env` (read from the app state dir, never printed)
 - [ ] Setup smoke test (curl): Zetaris UI :3000, `SELECT 1` over REST :8888, one Nemotron reply via Nightshift `/v1/chat/completions`
 - [ ] 👤 Cursor: signed in, credit active, open this repo in Cursor (required dev environment)
 - [ ] 👤 Attend participant onboarding, 21 Oct 12:00–13:30 UTC
